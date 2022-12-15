@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!--bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- html2pdf -->
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  </head>
+  <body>
+    <!-- ******************************************  RESUME FORM START  ******************************************** -->
+    <div id="resumeForm">
+      <form>
+        <h3 id="fill" class="text-center">
+          Fill the below information to build resume.
+        </h3>
+        <!-- about section details fields -->
+        <div class="container">
+          <p class="bg">ABOUT SECTION</p>
+
+          <div class="row">
+            <div class="col">
+              <!--First Name input -->
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" />
+              </div>
+            </div>
+            <div class="col">
+              <!-- phone number input -->
+              <div>
+                <label for="phoneNumber">Phone number</label>
+                <input type="text" id="phoneNumber" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col">
+              <!-- Email input -->
+              <div>
+                <label for="email">Email address</label>
+                <input type="email" id="email" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col">
+              <!-- address input -->
+              <div>
+                <label for="address">Address</label>
+                <input type="textarea" id="address" class="form-control" />
+              </div>
+            </div>
+            <div class="col">
+              <!--profile photo-->
+              <div>
+                <label for="photo">Upload Photo</label>
+                <input class="form-control" id="photo" type="file" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <p class="bg">SOCIAL LINKS</p>
+
+          <!-- social links input -->
+          <div>
+            <input type="text" id="socialLinks" class="form-control sLinks" />
+          </div>
+          <div id="addSLinks"></div>
+        </div>
+
+        <button
+          type="button"
+          onclick="addSlinks()"
+          class="btn plus btn-primary"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div class="container">
+          <p class="bg">OBJECTIVE</p>
+
+          <!-- objective textarea -->
+          <div>
+            <textarea
+              type="text"
+              id="objective"
+              class="form-control"
+            ></textarea>
+          </div>
+        </div>
+        <!-- Education details fields -->
+        <div class="container">
+          <p class="bg">EDUCATION</p>
+
+          <div class="row">
+            <div class="col">
+              <!-- school input -->
+              <div>
+                <label for="school">School/College</label>
+                <input type="text" id="school" class="form-control school" />
+              </div>
+            </div>
+            <div class="col">
+              <!-- degree input -->
+              <div>
+                <label for="degree">Degree</label>
+                <input type="text" id="degree" class="form-control degree" />
+              </div>
+            </div>
+            <div class="col">
+              <!-- board input -->
+              <div>
+                <label for="board">Board</label>
+                <input type="text" id="borad" class="form-control board" />
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col">
+              <!-- year input -->
+              <div>
+                <label for="year">Year of Completion</label>
+                <input type="text" id="year" class="form-control year" />
+              </div>
+            </div>
+            <div class="col">
+              <!--percentage input -->
+              <div>
+                <label for="percentage"> Percentage</label>
+                <input
+                  type="text"
+                  id="percentage"
+                  class="form-control percentage"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="addEd"></div>
+        </div>
+        <button
+          type="button"
+          onclick="addEducation()"
+          class="btn plus btn-primary"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <!-- achievement details fields -->
+        <div class="container">
+          <p class="bg">ACHIVEMENT</p>
+          <div class="row">
+            <div class="col">
+              <!-- title input -->
+              <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control title" />
+              </div>
+            </div>
+            <div class="col">
+              <!-- description input -->
+              <div>
+                <label for="description">Description</label>
+                <input
+                  type="textarea"
+                  id="description"
+                  class="form-control description"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="addAch"></div>
+        </div>
+
+        <button
+          type="button"
+          onclick="addAchievement()"
+          class="btn plus btn-primary"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <!-- experience details fields -->
+        <div class="container">
+          <p class="bg">EXPERIENCE</p>
+
+          <div class="row">
+            <div class="col">
+              <!-- title input -->
+              <div>
+                <label for="jobTitle">Title</label>
+                <input
+                  type="text"
+                  id="jobTitle"
+                  class="form-control jobTitle"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <!-- year input -->
+              <div>
+                <label for="yearEx">No. of Years</label>
+                <input type="text" id="yearEx" class="form-control jobYear" />
+              </div>
+            </div>
+            <div class="col">
+              <!-- location input -->
+              <div>
+                <label for="location">Location</label>
+                <input
+                  type="text"
+                  id="location"
+                  class="form-control location"
+                />
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col">
+              <!-- company input -->
+              <div>
+                <label for="company">Company/Organization</label>
+                <input type="text" id="company" class="form-control company" />
+              </div>
+            </div>
+            <div class="col">
+              <!-- description input -->
+              <div>
+                <label for="jobDescription"> Job Description</label>
+                <input
+                  type="text"
+                  id="jobDescription"
+                  class="form-control jobDescription"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="addEx"></div>
+        </div>
+        <button
+          type="button"
+          onclick="addExperience()"
+          class="btn plus btn-primary"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <!-- project details fields -->
+        <div class="container">
+          <p class="bg">PROJECT</p>
+
+          <div class="row">
+            <div class="col">
+              <!-- title input -->
+              <div>
+                <label for="projectTitle">Title</label>
+                <input
+                  type="text"
+                  id="projectTitle"
+                  class="form-control projectTitle"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <!-- link input -->
+              <div>
+                <label for="link">Link Of Projects</label>
+                <input type="text" id="link" class="form-control projectLink" />
+              </div>
+            </div>
+            <div class="col">
+              <!-- location input -->
+              <div>
+                <label for="projectDesc">Description</label>
+                <input
+                  type="email"
+                  id="projectDesc"
+                  class="form-control projectDesc"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="addProject"></div>
+        </div>
+
+        <button
+          type="button"
+          onclick="addProject()"
+          class="btn plus btn-primary"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div class="container">
+          <p class="bg">SKILLS</p>
+
+          <!-- skills input -->
+          <div>
+            <input type="text" id="skills" class="form-control skills" />
+          </div>
+          <div id="addSkills"></div>
+        </div>
+
+        <button
+          type="button"
+          onclick="addSkills()"
+          class="btn plus btn-primary"
+        >
+          <i class="fa-solid fa-plus"></i></button
+        ><br />
+        <br />
+        <div class="text-center">
+          <button
+            type="button"
+            id="previewButton"
+            onclick="generateResume()"
+            class="btn btn-dark"
+          >
+            Preview
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- ******************************************  RESUME FORM END  ******************************************** -->
+
+    <!-- ******************************************  RESUME TEMPLATE START  ******************************************** -->
+    <div class="container Template" id="resumeTemplate">
+      <!-- to change the color of resume -->
+      <div id="colorButton">
+        <button id="moreColorButton"
+          class="btn btn-info"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          More colors...
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+              Choose the color for your resume
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>
+              <button onclick="blue()" class="button blue"></button>
+        <button onclick="brown()" class="button brown"></button>
+        <button onclick="darkcyan()" class="button darkcyan"></button>
+        <button onclick="coral()" class="button coral"></button>
+        <button onclick="darkkhaki()" class="button darkkhaki"></button>
+        <button onclick="aqua()" class="button aqua"></button>
+        <button onclick="beige()" class="button beige"></button>
+        <button onclick="blueviolet()" class="button blueviolet"></button>
+        <button onclick="burlywood()" class="button burlywood"></button>
+        <button onclick="cadetblue()" class="button cadetblue"></button>
+        <button onclick="chocolate()" class="button chocolate"></button>
+        <button
+          onclick="cornflowerblue()"
+          class="button cornflowerblue"
+        ></button>
+        <button onclick="darkgoldenrod()" class="button darkgoldenrod"></button>
+        <button onclick="darkgray()" class="button darkgray"></button>
+        <button onclick="darkmagenta()" class="button darkmagenta"></button>
+        <button onclick="darksalmon()" class="button darksalmon"></button>
+        <button onclick="deepskyblue()" class="button deepskyblue"></button>
+        <button onclick="forestgreen()" class="button forestgreen"></button>
+        <button onclick="indianred()" class="button indianred"></button>
+        <button onclick="lavender()" class="button lavender"></button>
+        <button onclick="lavenderblush()" class="button lavenderblush"></button>
+        <button onclick="lemonchiffon()" class="button lemonchiffon"></button>
+        <button onclick="lightpink()" class="button lightpink"></button>
+        <button
+          onclick="mediumaquamarine()"
+          class="button mediumaquamarine"
+        ></button>
+        <button onclick="plum()" class="button plum"></button>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <!-- to get and set resume template info.  -->
+      <div class="row">
+        <div class="col-md-4" id="bg">
+          <!--first column-->
+          <div class="text-center">
+            <img src="profile.png" id="profile" />
+
+            <h1 id="nameT">riya vijayvargiya</h1>
+            <h5 id="phoneT">9461788860</h5>
+            <p id="emailT">riyavijayvargiya7252@gmail.com</p>
+            <h5 id="addressT">F-222 R.k.Colony,Bhilwara,Rajasthan</h5>
+          </div>
+
+          <div id="sLinksHide" class="text-center">
+            <hr />
+            <!--social links-->
+            <h4 class="bg">SOCIAL LINKS</h4>
+            <p style="font-size: 20px" id="sLinksT"></p>
+          </div>
+          <div id="skillsHide" class="text-center">
+            <!--skills-->
+            <h4 class="bg">SKILLS</h4>
+            <p style="font-size: 20px" id="skillsT"></p>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <!--second column-->
+
+          <div id="objectiveHide">
+            <!--objective-->
+            <h4 class="bg">OBJECTIVE</h4>
+            <p id="objectiveT"></p>
+          </div>
+
+          <div id="educationHide">
+            <!--education-->
+            <h4 class="bg">EDUCATION</h4>
+            <p id="educationT"></p>
+          </div>
+
+          <div id="experienceHide">
+            <!--experience-->
+            <h4 class="bg">EXPERIENCE</h4>
+            <p id="experienceT"></p>
+          </div>
+
+          <div id="achievementHide">
+            <!--achievement-->
+            <h4 class="bg">ACHIEVEMENT</h4>
+            <p id="achievementT"></p>
+          </div>
+
+          <div id="projectHide">
+            <!--project-->
+            <h4 class="bg">PROJECT</h4>
+            <p id="projectT"></p>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        id="print"
+        onclick="printResume()"
+        class="btn btn-secondary"
+      >
+        Print Resume
+      </button>
+      <button
+        type="button"
+        id="back"
+        onclick="backToForm()"
+        class="btn btn-secondary"
+      >
+        Back To Form
+      </button>
+    </div>
+    <!-- ******************************************  RESUME TEMPLATE END  ******************************************** -->
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+/* CSS FOR details.html page */
+.bg {
+  background-color: darkcyan;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+li {
+  list-style: none;
+}
+#resumeTemplate {
+  display: none;
+}
+#back{
+  height: 38px;
+  width: 150px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#profile {
+  
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: 50%;
+  width: 250px;
+  height: 200px;
+}
+#moreColorButton{
+  margin-bottom: 20px;
+}
+.button {
+  border-radius: 50%;
+
+  padding: 20px;
+
+  display: inline-block;
+
+  margin: 4px 10px;
+  margin-bottom: 18px;
+}
+#fill {
+  margin-top: 40px;
+}
+
+.blue {
+  background-color: blue;
+}
+.brown {
+  background-color: brown;
+}
+.darkcyan {
+  background-color: darkcyan;
+}
+.coral {
+  background-color: coral;
+}
+.darkkhaki {
+  background-color: darkkhaki;
+}
+.aqua {
+  background-color:aqua;
+}
+.beige {
+  background-color:beige;
+}
+.blueviolet {
+  background-color:blueviolet;
+}
+.burlywood {
+  background-color:burlywood;
+}
+.cadetblue {
+  background-color:cadetblue;
+}
+.chocolate {
+  background-color:chocolate;
+}
+.cornflowerblue {
+  background-color:cornflowerblue;
+}
+.darkgoldenrod {
+  background-color:darkgoldenrod;
+}
+.darkgray {
+  background-color:darkgray;
+}
+.darkmagenta {
+  background-color:darkmagenta;
+}
+.darksalmon {
+  background-color:darksalmon;
+}
+.deepskyblue {
+  background-color:deepskyblue;
+}
+.forestgreen {
+  background-color:forestgreen;
+}
+.indianred {
+  background-color:indianred;
+}
+.lavender {
+  background-color:lavender;
+}
+.lavenderblush {
+  background-color:lavenderblush;
+}
+.lemonchiffon {
+  background-color:lemonchiffon;
+}
+.lightpink {
+  background-color:lightpink;
+}
+.mediumaquamarine {
+  background-color:mediumaquamarine;
+}
+.plum {
+  background-color:plum;
+}
+#print{
+  margin-top: 20px;
+  
+}
+
+.container {
+  margin-top: 50px;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.plus {
+  text-align: center;
+  height: 35px;
+  width: 40px;
+  margin: 10px;
+  margin-left: 290px;
+}
+#addAch {
+  margin-top: 10px;
+}
+#addSkills {
+  margin-top: 10px;
+}
+#addProject {
+  margin-top: 10px;
+}
+#socialLinks {
+  margin-bottom: 10px;
+}
+#bg {
+  background-color: darkcyan;
+}
+
+.card-header {
+  height: 40px;
+}
+#previewButton{
+ height: 40px;
+  margin-bottom: 50px;
+}
+.Template{
+  border: none;
+}

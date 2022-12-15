@@ -1,0 +1,55 @@
+/* CSS FOR index.html page */
+.navbar-brand{
+    text-align: center;
+    padding-right: 20px;
+
+}
+.hero-wrap {
+    min-height: 380px;
+    padding-bottom: 90px;
+    margin-top:50px;
+    font-weight: bold;
+}
+#line{
+    margin-top: 80px;
+
+    height: 10px;
+    background-color:darkolivegreen;
+}
+#line2{
+    height: 10px;
+    background-color:darkred;
+}
+.footer{
+    margin-top: 50px;
+    background-color: cadetblue;
+    margin-bottom: 50px;
+}
+ol li{
+    font-size: 20px;
+}
+#resumeImage{
+    height: 700px;
+    width: 900px;
+    margin-left: 300px;
+}
+#resumeButton{
+
+    height: 40px;
+    width: 240px;
+    margin-top: 20px;
+}
+#stepsImage{
+    height: 500px;
+    width: 400px;
+}
+#content{
+    color: darkslategray;
+}
+.main{
+    text-align: center;
+}
+
+.container{
+    margin-top: 20px;
+}
