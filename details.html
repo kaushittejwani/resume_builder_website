@@ -48,7 +48,7 @@
               <!--First Name input -->
               <div>
                 <label for="name">Name</label>
-                <input type="text" id="name" class="form-control" />
+                <input type="text" id="name" class="form-control"/>
               </div>
             </div>
             <div class="col">
@@ -99,9 +99,17 @@
         <button
           type="button"
           onclick="addSlinks()"
-          class="btn plus btn-primary"
+          class="btn plus btn-primary" 
         >
           <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <button
+          type="button"
+          onclick="removeSlinks()"
+          class="btn minus btn-danger"
+        >
+          <i class="fa-solid fa-minus"></i>
         </button>
 
         <div class="container">
@@ -173,6 +181,13 @@
         >
           <i class="fa-solid fa-plus"></i>
         </button>
+        <button
+          type="button"
+          onclick="removeEducation()"
+          class="btn minus btn-danger"
+        >
+          <i class="fa-solid fa-minus"></i>
+        </button>
         <!-- achievement details fields -->
         <div class="container">
           <p class="bg">ACHIVEMENT</p>
@@ -205,6 +220,13 @@
           class="btn plus btn-primary"
         >
           <i class="fa-solid fa-plus"></i>
+        </button>
+        <button
+          type="button"
+          onclick="removeAchievement()"
+          class="btn minus btn-danger"
+        >
+          <i class="fa-solid fa-minus"></i>
         </button>
         <!-- experience details fields -->
         <div class="container">
@@ -271,6 +293,13 @@
         >
           <i class="fa-solid fa-plus"></i>
         </button>
+        <button
+          type="button"
+          onclick="removeExperience()"
+          class="btn minus btn-danger"
+        >
+          <i class="fa-solid fa-minus"></i>
+        </button>
         <!-- project details fields -->
         <div class="container">
           <p class="bg">PROJECT</p>
@@ -316,6 +345,13 @@
         >
           <i class="fa-solid fa-plus"></i>
         </button>
+        <button
+          type="button"
+          onclick="removeProject()"
+          class="btn minus btn-danger"
+        >
+          <i class="fa-solid fa-minus"></i>
+        </button>
 
         <div class="container">
           <p class="bg">SKILLS</p>
@@ -333,7 +369,14 @@
           class="btn plus btn-primary"
         >
           <i class="fa-solid fa-plus"></i></button
-        ><br />
+        >
+        <button
+          type="button"
+          onclick="removeSkills()"
+          class="btn minus btn-danger"
+        >
+          <i class="fa-solid fa-minus"></i>
+        </button><br />
         <br />
         <div class="text-center">
           <button

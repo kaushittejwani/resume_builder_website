@@ -121,6 +121,9 @@ li {
   margin-top: 20px;
   
 }
+.skillsp{
+  padding-bottom: 10px;
+}
 
 .container {
   margin-top: 50px;
@@ -134,6 +137,11 @@ li {
   width: 40px;
   margin: 10px;
   margin-left: 290px;
+}
+.minus{
+  text-align: center;
+  height: 35px;
+  width: 40px;
 }
 #addAch {
   margin-top: 10px;
